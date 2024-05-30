@@ -21,3 +21,9 @@ console.log(aBigInt);
 console.log('type of aBigInt')
 console.log(typeof aBigInt);
 
+let aSymbol = Symbol("Hello");
+console.log('Value of  aSymbol')
+console.log(aSymbol);
+
+console.log('type of aSymbol')
+console.log(typeof aSymbol);
