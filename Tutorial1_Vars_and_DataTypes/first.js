@@ -18,3 +18,9 @@ const fLastName = 'Radha Krishna Yadav';
 // fLastName = 'Radha Krishna Yadavvv'; //-->This will produce error on console (ReferenceError: fname is not defined)
 
 console.log(fName);
+
+//////////////////////////
+let a;
+
+//const b; //This is invalid as const needs to be initialized
+
