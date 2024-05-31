@@ -12,3 +12,6 @@ let obj = {
 }
 
 console.log(`The cost of ${obj.item} is ${obj.price}rs`);
+
+
+console.log(`The addition of 1+2+3 = ${1 + 2 + 3}`);
