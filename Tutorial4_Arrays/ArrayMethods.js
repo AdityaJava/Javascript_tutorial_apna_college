@@ -9,7 +9,7 @@ console.log(krishnaNames);
 
 krishnaNames.push('vitthal');
 console.log(krishnaNames);
-console.log(krishnaNames.toString())
+console.log(krishnaNames.toString());
 
 let radhaRaniNames = ['krishnaKanta', 'RadhaRani', 'vrindavaneshwari'];
 
