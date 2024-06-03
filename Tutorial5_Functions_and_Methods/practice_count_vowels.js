@@ -1,4 +1,4 @@
-function countvowels(string) {
+const countvowels = (string) => {
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     let vowelCount = 0;
     for (str of string) {
