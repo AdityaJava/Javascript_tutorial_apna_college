@@ -2,6 +2,6 @@
 const sum = (a, b) => {
     return (a + b);
 }
-
-let s = sum(4, 5);
+console.log('Function definition = ', sum)
+let s = sum(4, 5); //Function call
 console.log(s);
