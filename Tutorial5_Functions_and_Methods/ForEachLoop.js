@@ -1,5 +1,6 @@
 /*
 arr.forEach(callBackFunction)
+A callBackFunction is a function passed as an argument to another function.
 */
 
 let arr = ['a', 'b', 'c', 'd', 'e', 'f',];
