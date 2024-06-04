@@ -6,3 +6,14 @@ let sum = marks.reduce((result, currentValue) => {
 });
 
 console.log(`Sum of ${marks} = ${sum}`);
+
+//Find Largest element
+
+let largestElement = marks.reduce((previous, current) => {
+    if (current > previous) {
+        previous = current;
+    }
+    return previous;
+});
+
+console.log(`Largest from  ${marks} is  ${largestElement}`);
