@@ -17,3 +17,10 @@ const fArr = (eArr) => {
 };
 
 arr.forEach(fArr);
+/////////////////////////
+console.log('------------------------using function keyword----------------------')
+arr.forEach(function fArr(eArr) {
+    console.log(eArr);
+});
+
+
