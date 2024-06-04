@@ -1,0 +1,4 @@
+/*
+Higher order functions are functions which take other functions as parameter or they are returning some function
+forEach is a Higher order function
+*/
