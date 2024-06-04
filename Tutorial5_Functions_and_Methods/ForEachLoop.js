@@ -55,3 +55,8 @@ arr.forEach(function fArr(eArr) {
 });
 
 
+///////////
+
+arr.forEach((val, index, arr) => {
+    console.log(val, index, arr);
+})
