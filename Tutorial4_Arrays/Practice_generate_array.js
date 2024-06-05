@@ -18,7 +18,7 @@ console.log(`Sum of ${numberArr} = ${sum}`);
 
 
 let multiplication = numberArr.reduce((result, currentValue) => {
-    return result = result * currentValue;
+    return result * currentValue;
 });
 
 console.log(`Multiplication of ${numberArr} = ${multiplication}`);
