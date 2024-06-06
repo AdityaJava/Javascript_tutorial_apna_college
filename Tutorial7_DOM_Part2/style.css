@@ -1,0 +1,10 @@
+.box {
+    height: 100px;
+    width: 100px;
+    right: 0px;
+    background-color: blueviolet;
+}
+
+.border {
+    border: 2px solid black;
+}
