@@ -1,8 +1,8 @@
 let number = prompt("Enter number to calculate it's square");
-let innerHtmlTxt = document.getElementById('result').innerHTML;
-document.getElementById('result').innerHTML = innerHtmlTxt + (number * number);
+let result = document.getElementById('result');
+result.innerText = result.innerText + (number * number);
 
 ///////////
 
-let innerHtmlQueryTxt = document.querySelector('#query-selector-result').innerHTML;
-document.querySelector('#query-selector-result').innerHTML = innerHtmlQueryTxt + (number * number);
+let querySelectorResult = document.querySelector('#query-selector-result');
+querySelectorResult.innerText = querySelectorResult.innerText + (number * number);
