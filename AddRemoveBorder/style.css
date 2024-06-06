@@ -6,5 +6,7 @@
 }
 
 .border {
-    border: 2px solid black;
+    border: 10px solid green;
+    background-color: black;
+    color: white;
 }
