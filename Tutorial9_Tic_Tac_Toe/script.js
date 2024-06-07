@@ -1,5 +1,4 @@
 let boxes = document.querySelectorAll('.box');
-console.log(boxes);
 
 let turnO = true;
 
@@ -17,11 +16,15 @@ let winningPatters = [
 boxes.forEach((box) => {
     box.addEventListener('click', (e) => {
         if (turnO) {
+            console.log(turnO);
             box.innerText = 'O';
+            box.classList.add('o-background');
             turnO = false;
         }
         else {
+            console.log(turnO);
             box.innerText = 'X';
+            box.classList.add('x-background');
             turnO = true;
         }
         box.disabled = true;
@@ -30,7 +33,6 @@ boxes.forEach((box) => {
 
 
 let reset = document.querySelector('.reset-btn');
-console.log(reset);
 
 reset.addEventListener('click', (e) => {
     console.log('reset clicked');

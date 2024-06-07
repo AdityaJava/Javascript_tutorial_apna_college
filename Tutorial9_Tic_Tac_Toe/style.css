@@ -40,3 +40,13 @@
 .reset-btn:hover {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
+
+.x-background {
+    background-color: #f95959;
+    color: #e3e3e3;
+}
+
+.o-background {
+    background-color: #00bbf0;
+    color: #e3e3e3;
+}
