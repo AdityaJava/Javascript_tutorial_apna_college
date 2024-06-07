@@ -53,7 +53,7 @@ boxes.forEach((box) => {
                 box.disabled = true;
             });
             wonMessage.innerText = 'Player with Sign ' + patternWon + ' wins';
-            wonMessage.style.display = 'block';
+            wonMessage.style.display = 'flex';
         }
     });
 })

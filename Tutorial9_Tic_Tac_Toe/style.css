@@ -56,11 +56,25 @@
 #won-message {
     height: 100px;
     width: 100%;
-    background-color: #e63946;
+    background-color: #fb8500;
     color: white;
     font-weight: 700;
     font-size: 2rem;
-    text-align: center;
-    margin-top: 100px;
     display: none;
+    justify-content: center;
+    align-items: center;
+    animation-name: top-down;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes top-down {
+    from {
+        margin-top: 0px;
+    }
+
+    to {
+        margin-top: 100px;
+    }
 }
