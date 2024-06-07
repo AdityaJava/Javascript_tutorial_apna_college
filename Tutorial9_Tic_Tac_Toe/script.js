@@ -1,4 +1,5 @@
 let boxes = document.querySelectorAll('.box');
+let wonMessage = document.querySelector('#won-message');
 
 let turnO = true;
 
@@ -51,7 +52,6 @@ boxes.forEach((box) => {
             boxes.forEach(box => {
                 box.disabled = true;
             });
-            let wonMessage = document.querySelector('#won-message');
             wonMessage.innerText = 'Player with Sign ' + patternWon + ' wins';
             wonMessage.style.display = 'block';
         }
@@ -69,5 +69,7 @@ reset.addEventListener('click', (e) => {
         box.classList.remove('o-background');
         box.disabled = false;
     })
+    wonMessage.style.display = 'none';
+
 });
 
