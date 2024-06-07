@@ -61,6 +61,7 @@ reset.addEventListener('click', (e) => {
         box.innerText = '';
         box.classList.remove('x-background');
         box.classList.remove('o-background');
+        box.disabled = false;
     })
 });
 
