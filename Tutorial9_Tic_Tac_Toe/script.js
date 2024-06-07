@@ -16,13 +16,16 @@ let winningPatternsList = [
 const checkWinner = () => {
     console.log('checking winner');
     for (let winningPatterns of winningPatternsList) {
-        // console.log(winningPatterns);
-        // console.log(winningPatterns[0], winningPatterns[1], winningPatterns[2]);
-        console.log(boxes[winningPatterns[0]].innerText, boxes[winningPatterns[1]].innerText, boxes[winningPatterns[2]].innerText);
-
-        if (boxes[winningPatterns[0]].innerText === boxes[winningPatterns[1]].innerText === boxes[winningPatterns[2]].innerText) {
-            console.log(`Patter won ${winningPatterns[0]}`);
-            return winningPatterns[0];
+        if (boxes[winningPatterns[0]].innerText != '' && boxes[winningPatterns[1]].innerText != '' && boxes[winningPatterns[2]].innerText != '') {
+            if (boxes[winningPatterns[0]].innerText === boxes[winningPatterns[1]].innerText
+                &&
+                boxes[winningPatterns[1]].innerText === boxes[winningPatterns[2]].innerText
+                &&
+                boxes[winningPatterns[0]].innerText === boxes[winningPatterns[2]].innerText
+            ) {
+                console.log(`Patter won ${boxes[winningPatterns[0]].innerText}`);
+                return winningPatterns[0];
+            }
         }
     }
     return 'W';
