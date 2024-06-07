@@ -10,7 +10,7 @@ modeButtons.forEach(button => {
         if (e.target.id === 'dark-selected') {
             body.classList.add('darkmode');
         }
-        if (e.target.id === 'light-selected') {
+        else if (e.target.id === 'light-selected') {
             body.classList.remove('darkmode');
         }
     });
