@@ -2,7 +2,7 @@ let boxes = document.querySelectorAll('.box');
 
 let turnO = true;
 
-let winningPatters = [
+let winningPatternsList = [
     [0, 1, 2],
     [0, 3, 6],
     [0, 4, 8],
@@ -13,10 +13,24 @@ let winningPatters = [
     [6, 7, 8]
 ];
 
+const checkWinner = () => {
+    console.log('checking winner');
+    for (let winningPatterns of winningPatternsList) {
+        // console.log(winningPatterns);
+        // console.log(winningPatterns[0], winningPatterns[1], winningPatterns[2]);
+        console.log(boxes[winningPatterns[0]].innerText, boxes[winningPatterns[1]].innerText, boxes[winningPatterns[2]].innerText);
+
+        if (boxes[winningPatterns[0]].innerText === boxes[winningPatterns[1]].innerText === boxes[winningPatterns[2]].innerText) {
+            console.log(`Patter won ${winningPatterns[0]}`);
+            return winningPatterns[0];
+        }
+    }
+    return 'W';
+}
+
 boxes.forEach((box) => {
     box.addEventListener('click', (e) => {
         if (turnO) {
-            console.log(turnO);
             box.innerText = 'O';
             box.classList.add('o-background');
             turnO = false;
@@ -28,17 +42,22 @@ boxes.forEach((box) => {
             turnO = true;
         }
         box.disabled = true;
+        let patternWon = checkWinner();
+        if (patternWon !== 'W') {
+            console.log(patternWon);
+        }
     });
 })
 
 
 let reset = document.querySelector('.reset-btn');
 
+
 reset.addEventListener('click', (e) => {
-    console.log('reset clicked');
     boxes.forEach(box => {
         box.innerText = '';
         box.classList.remove('x-background');
         box.classList.remove('o-background');
     })
-})
+});
+
