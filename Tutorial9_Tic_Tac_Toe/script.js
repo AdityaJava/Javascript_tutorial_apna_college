@@ -2,7 +2,8 @@ let boxes = document.querySelectorAll('.box');
 let wonMessage = document.querySelector('#message');
 
 let turnO = true;
-
+let selectedBoxCount = 0;
+let isWon = false;
 let winningPatternsList = [
     [0, 1, 2],
     [0, 3, 6],
@@ -15,7 +16,6 @@ let winningPatternsList = [
 ];
 
 const checkWinner = () => {
-    console.log('checking winner');
     for (let winningPatterns of winningPatternsList) {
         if (boxes[winningPatterns[0]].innerText != '' && boxes[winningPatterns[1]].innerText != '' && boxes[winningPatterns[2]].innerText != '') {
             if (boxes[winningPatterns[0]].innerText === boxes[winningPatterns[1]].innerText
@@ -24,7 +24,6 @@ const checkWinner = () => {
                 &&
                 boxes[winningPatterns[0]].innerText === boxes[winningPatterns[2]].innerText
             ) {
-                console.log(`Patter won ${boxes[winningPatterns[0]].innerText}`);
                 return boxes[winningPatterns[0]].innerText;
             }
         }
@@ -54,6 +53,15 @@ boxes.forEach((box) => {
             });
             wonMessage.innerText = 'Player with Sign ' + patternWon + ' wins';
             wonMessage.style.display = 'flex';
+            isWon = true;
+        }
+        selectedBoxCount++;
+        console.log(`selectedBoxCount ${selectedBoxCount}`);
+        console.log(selectedBoxCount === 9);
+
+        if (!isWon && selectedBoxCount === 9) {
+            wonMessage.innerText = 'Its a Tie';
+            wonMessage.style.display = 'flex';
         }
     });
 })
@@ -70,6 +78,7 @@ reset.addEventListener('click', (e) => {
         box.disabled = false;
     })
     wonMessage.style.display = 'none';
-
+    selectedBoxCount = 0;
+    isWon = false;
 });
 
