@@ -48,6 +48,9 @@ boxes.forEach((box) => {
         let patternWon = checkWinner();
         if (patternWon !== 'W') {
             console.log(`Won patter = ${patternWon}`);
+            boxes.forEach(box => {
+                box.disabled = true;
+            });
         }
     });
 })
