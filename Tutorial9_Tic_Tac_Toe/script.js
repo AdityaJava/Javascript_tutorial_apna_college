@@ -56,9 +56,6 @@ boxes.forEach((box) => {
             isWon = true;
         }
         selectedBoxCount++;
-        console.log(`selectedBoxCount ${selectedBoxCount}`);
-        console.log(selectedBoxCount === 9);
-
         if (!isWon && selectedBoxCount === 9) {
             wonMessage.innerText = 'Its a Tie';
             wonMessage.style.display = 'flex';
