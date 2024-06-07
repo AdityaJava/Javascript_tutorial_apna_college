@@ -37,6 +37,11 @@
     font-size: 1rem;
 }
 
+.reset-btn p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .reset-btn:hover {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
