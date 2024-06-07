@@ -52,7 +52,7 @@ boxes.forEach((box) => {
                 box.disabled = true;
             });
             let wonMessage = document.querySelector('#won-message');
-            wonMessage.innerText = 'Player with Sign' + patternWon + 'won';
+            wonMessage.innerText = 'Player with Sign ' + patternWon + ' wins';
             wonMessage.style.display = 'block';
         }
     });
