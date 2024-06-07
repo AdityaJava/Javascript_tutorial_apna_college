@@ -24,7 +24,7 @@ const checkWinner = () => {
                 boxes[winningPatterns[0]].innerText === boxes[winningPatterns[2]].innerText
             ) {
                 console.log(`Patter won ${boxes[winningPatterns[0]].innerText}`);
-                return winningPatterns[0];
+                return boxes[winningPatterns[0]].innerText;
             }
         }
     }
@@ -47,7 +47,7 @@ boxes.forEach((box) => {
         box.disabled = true;
         let patternWon = checkWinner();
         if (patternWon !== 'W') {
-            console.log(patternWon);
+            console.log(`Won patter = ${patternWon}`);
         }
     });
 })
