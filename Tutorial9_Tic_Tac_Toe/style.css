@@ -6,8 +6,8 @@
 }
 
 .grid-box {
-    height: 10vw;
-    width: 10vw;
+    height: 30vw;
+    width: 30vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
@@ -19,6 +19,7 @@
     border: 2px solid black;
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 10);
+    font-size: 4rem;
 }
 
 .box:hover {
