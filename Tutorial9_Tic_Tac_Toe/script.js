@@ -26,3 +26,14 @@ boxes.forEach((box) => {
         }
     });
 })
+
+
+let reset = document.querySelector('.reset-btn');
+console.log(reset);
+
+reset.addEventListener('click', (e) => {
+    console.log('reset clicked');
+    boxes.forEach(box => {
+        box.innerText = '';
+    })
+})

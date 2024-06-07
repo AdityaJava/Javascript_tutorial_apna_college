@@ -6,7 +6,7 @@
 }
 
 .grid-box {
-    height: 30vw;
+    height: 20vw;
     width: 30vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -29,7 +29,7 @@
 }
 
 .reset-btn {
-    margin-top: 10px;
+    margin-top: 100px;
     border-radius: 0.5rem;
     background-color: rgb(5, 88, 5);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 10);
