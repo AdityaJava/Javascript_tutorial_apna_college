@@ -16,16 +16,15 @@ let winningPatters = [
 
 boxes.forEach((box) => {
     box.addEventListener('click', (e) => {
-        if (box.innerText === '') {
-            if (turnO) {
-                box.innerText = 'O';
-                turnO = false;
-            }
-            else {
-                box.innerText = 'X';
-                turnO = true;
-            }
+        if (turnO) {
+            box.innerText = 'O';
+            turnO = false;
         }
+        else {
+            box.innerText = 'X';
+            turnO = true;
+        }
+        box.disabled = true;
     });
 })
 
