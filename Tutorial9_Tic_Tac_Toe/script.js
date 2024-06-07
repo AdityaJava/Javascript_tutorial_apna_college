@@ -1,5 +1,5 @@
 let boxes = document.querySelectorAll('.box');
-let wonMessage = document.querySelector('#won-message');
+let wonMessage = document.querySelector('#message');
 
 let turnO = true;
 
