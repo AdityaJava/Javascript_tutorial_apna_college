@@ -38,5 +38,7 @@ reset.addEventListener('click', (e) => {
     console.log('reset clicked');
     boxes.forEach(box => {
         box.innerText = '';
+        box.classList.remove('x-background');
+        box.classList.remove('o-background');
     })
 })
