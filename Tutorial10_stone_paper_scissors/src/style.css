@@ -13,6 +13,7 @@
 .images {
     object-fit: cover;
     border-radius: 15rem;
+    border: 2px solid black;
 }
 
 .images:hover {
