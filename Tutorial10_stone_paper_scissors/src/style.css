@@ -12,6 +12,16 @@
 
 .images {
     object-fit: cover;
+    border-radius: 15rem;
+}
+
+.images:hover {
+    transform: scale(1.2);
+    border: 0.2rem solid white;
+}
+
+.images:active {
+    transform: scale(1);
 }
 
 .images:nth-child(1) {
