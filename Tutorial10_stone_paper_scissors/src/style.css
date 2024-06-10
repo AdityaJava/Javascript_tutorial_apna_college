@@ -12,5 +12,16 @@
 
 .images {
     object-fit: cover;
-    border: 2px solid black;
+}
+
+.images:nth-child(1) {
+    background-color: #03045e;
+}
+
+.images:nth-child(2) {
+    background-color: #ae2012;
+}
+
+.images:nth-child(3) {
+    background-color: #ffc300;
 }
