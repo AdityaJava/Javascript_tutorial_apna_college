@@ -21,7 +21,6 @@ const checkWinner = (userChoice, compChoice) => {
         return [userScore, compScore];
     }
     else {
-        debugger;
         if (userChoice === rock) {
             if (compChoice === paper) {
                 compScore++;
