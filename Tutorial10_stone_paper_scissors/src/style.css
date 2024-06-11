@@ -13,12 +13,17 @@
     flex-direction: column;
 }
 
-.comp-choice-con {
+
+.user-choice-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 30%;
     width: 20%;
 }
 
-.user-choice-con {
+.comp-choice-con {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,6 +40,13 @@
     align-items: center;
 }
 
+.comp-choice {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .images-con {
     height: 40%;
