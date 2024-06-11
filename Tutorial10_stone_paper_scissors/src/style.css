@@ -91,3 +91,8 @@
     border-radius: 1.2rem;
     margin-bottom: 0.5rem;
 }
+
+.score:hover {
+    transform: scale(1.1);
+
+}
