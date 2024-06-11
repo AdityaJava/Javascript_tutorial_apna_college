@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "file:///D:/FrontEnd/Javascript_tutorial_apna_college/Tutorial10_stone_paper_scissors/src/index.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
