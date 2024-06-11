@@ -85,6 +85,7 @@ const printScore = (userScore, compScore) => {
 }
 
 const printChoices = (userChoice, compChoice) => {
+    displayNoneAll();
     let userChoiceclass = document.querySelector('#' + userChoiceToClass.get(userChoice));
     userChoiceclass.classList.remove('display-none');
     userChoiceclass.classList.add('display-block');
