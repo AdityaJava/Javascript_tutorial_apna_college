@@ -5,6 +5,8 @@ console.log(gameImages);
 const rock = 'rock';
 const paper = 'paper'
 const scissors = 'scissors';
+let userScore = 0;
+let compScore = 0;
 
 
 const generateComputerChoice = () => {
@@ -14,9 +16,6 @@ const generateComputerChoice = () => {
 }
 
 const checkWinner = (userChoice, compChoice) => {
-    let userScore = 0;
-    let compScore = 0;
-
     if (userChoice === compChoice) {
         return [userScore, compScore];
     }
