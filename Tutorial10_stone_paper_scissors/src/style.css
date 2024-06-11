@@ -112,26 +112,8 @@
 
 }
 
-
 .user-choice img {
     object-fit: cover;
-}
-
-.rock-choice {
-    height: 50%;
-    width: 50%;
-    background-image: url('../images/stone-removebg-preview.png');
-    background-size: cover;
-}
-
-.paper-choice {
-    background-image: url('../images/paper-removebg-preview.png');
-    background-size: cover;
-}
-
-.scissors-choice {
-    background-image: url('../images/scissors-removebg-preview.png');
-    background-size: cover;
 }
 
 .choice {
