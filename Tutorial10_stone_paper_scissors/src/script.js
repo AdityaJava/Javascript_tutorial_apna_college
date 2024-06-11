@@ -86,7 +86,9 @@ const printScore = (userScore, compScore) => {
 
 const printChoices = (userChoice, compChoice) => {
     let userChoiceclass = document.querySelector('#' + userChoiceToClass.get(userChoice));
+    userChoiceclass.classList.remove('display-none');
     userChoiceclass.classList.add('display-block');
+    console.log(userChoiceclass);
 }
 
 //Generate computer choice
@@ -97,7 +99,6 @@ const playGame = (userChoice) => {
     printScore(scores[0], scores[1]);
 }
 displayNoneAll();
-
 gameImages.forEach(gameImage => {
     gameImage.addEventListener('click', (e) => {
         let userChoice = gameImage.getAttribute('id');
