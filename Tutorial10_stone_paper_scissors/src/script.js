@@ -4,6 +4,6 @@ console.log('event');
 console.log(gameImages);
 gameImages.forEach(gameImage => {
     gameImage.addEventListener('click', (e) => {
-        console.log(e);
+        console.log(e.target.id);
     })
 })
