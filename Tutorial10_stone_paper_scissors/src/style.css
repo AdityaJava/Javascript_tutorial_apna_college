@@ -67,6 +67,12 @@
     font-weight: 700;
     line-height: 1.5rem;
     font-size: 1.3rem;
+    border-radius: 1.2rem;
+}
+
+.score-board:hover {
+    transform: scale(1.1);
+    border: 2px solid black;
 }
 
 .score {
@@ -82,6 +88,6 @@
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFDE4, #005AA7);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 1.2rem;
+    margin-bottom: 0.5rem;
 }
-
-.user-score {}
