@@ -75,9 +75,10 @@ const printScore = (userScore, compScore) => {
 const printChoices = (userChoice, compChoice) => {
     //console.log('userChoicetoclass', userChoiceToClass.get(userChoice));
     let userChoiceclass = document.querySelector('#' + userChoiceToClass.get(userChoice));
-    //userChoiceToClass.classList.add('display-block');
+    userChoiceclass.classList.add('display-block');
     console.log(userChoiceclass);
 }
+
 //Generate computer choice
 const playGame = (userChoice) => {
     let compChoice = generateComputerChoice();
