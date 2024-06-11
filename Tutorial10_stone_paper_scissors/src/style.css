@@ -112,10 +112,15 @@
 }
 
 .user-choice img {
+    display: none;
     object-fit: cover;
 }
 
 .choice {
     display: flex;
     justify-content: space-around;
+}
+
+.display-block {
+    display: block;
 }

@@ -8,6 +8,22 @@ const scissors = 'scissors';
 let userScore = 0;
 let compScore = 0;
 
+const userChoiceToClass = new Map(
+    [
+        [rock, 'user-choice-stone'],
+        [paper, 'user-choice-paper'],
+        [scissors, 'user-choice-scissors']
+    ]
+);
+
+const compChoiceToClass = new Map(
+    [
+        [rock, 'comp-choice-stone'],
+        [paper, 'comp-choice-paper'],
+        [scissors, 'comp-choice-scissors']
+    ]
+);
+
 
 const generateComputerChoice = () => {
     const options = [rock, paper, scissors];
@@ -56,13 +72,16 @@ const printScore = (userScore, compScore) => {
     compScoreTag.innerText = compScore;
 }
 
-const printUserChoice = () => {
-
-
+const printChoices = (userChoice, compChoice) => {
+    //console.log('userChoicetoclass', userChoiceToClass.get(userChoice));
+    let userChoiceclass = document.querySelector('#' + userChoiceToClass.get(userChoice));
+    //userChoiceToClass.classList.add('display-block');
+    console.log(userChoiceclass);
 }
 //Generate computer choice
 const playGame = (userChoice) => {
     let compChoice = generateComputerChoice();
+    printChoices(userChoice, compChoice);
     console.log('User choice =' + userChoice);
     console.log('Computer choice =' + compChoice);
     let scores = checkWinner(userChoice, compChoice);
