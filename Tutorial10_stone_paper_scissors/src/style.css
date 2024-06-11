@@ -19,6 +19,7 @@
 .images:hover {
     transform: scale(1.2);
     border: 0.2rem solid white;
+    cursor: pointer;
 }
 
 .images:active {
