@@ -22,7 +22,10 @@ const compChoiceToClass = new Map(
     ]
 );
 
-
+const playAudio = () => {
+    let audio = document.querySelector('#play-audio');
+    audio.play();
+}
 const displayNoneAll = () => {
     console.log('display none alls');
     let userChoices = document.querySelectorAll('.user-choices');
@@ -95,11 +98,11 @@ const printChoices = (userChoice, compChoice) => {
     compChoiceclass.classList.remove('display-none');
     compChoiceclass.classList.add('display-block');
     console.log(compChoiceclass);
-
 }
 
 //Generate computer choice
 const playGame = (userChoice) => {
+    playAudio();
     let compChoice = generateComputerChoice();
     printChoices(userChoice, compChoice);
     let scores = checkWinner(userChoice, compChoice);
