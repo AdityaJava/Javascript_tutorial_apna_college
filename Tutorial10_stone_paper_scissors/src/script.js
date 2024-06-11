@@ -90,6 +90,12 @@ const printChoices = (userChoice, compChoice) => {
     userChoiceclass.classList.remove('display-none');
     userChoiceclass.classList.add('display-block');
     console.log(userChoiceclass);
+
+    let compChoiceclass = document.querySelector('#' + compChoiceToClass.get(compChoice));
+    compChoiceclass.classList.remove('display-none');
+    compChoiceclass.classList.add('display-block');
+    console.log(compChoiceclass);
+
 }
 
 //Generate computer choice
