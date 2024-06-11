@@ -1,7 +1,5 @@
 let gameImages = document.querySelectorAll('.img-tgs');
 
-console.log('event');
-console.log(gameImages);
 const rock = 'rock';
 const paper = 'paper'
 const scissors = 'scissors';
@@ -24,6 +22,21 @@ const compChoiceToClass = new Map(
     ]
 );
 
+
+const displayNoneAll = () => {
+    console.log('display none alls');
+    let userChoices = document.querySelectorAll('.user-choices');
+    userChoices.forEach(userChoice => {
+        userChoice.classList.add('display-none');
+    })
+    console.log(userChoices);
+    let compChoices = document.querySelectorAll('.comp-choices');
+    compChoices.forEach(compChoice => {
+        compChoice.classList.add('display-none');
+    })
+    console.log(compChoices);
+
+}
 
 const generateComputerChoice = () => {
     const options = [rock, paper, scissors];
@@ -67,28 +80,23 @@ const checkWinner = (userChoice, compChoice) => {
 const printScore = (userScore, compScore) => {
     let userScoreTag = document.querySelector('#user-score');
     let compScoreTag = document.querySelector('#comp-score');
-    console.log(userScoreTag);
     userScoreTag.innerText = userScore;
     compScoreTag.innerText = compScore;
 }
 
 const printChoices = (userChoice, compChoice) => {
-    //console.log('userChoicetoclass', userChoiceToClass.get(userChoice));
     let userChoiceclass = document.querySelector('#' + userChoiceToClass.get(userChoice));
     userChoiceclass.classList.add('display-block');
-    console.log(userChoiceclass);
 }
 
 //Generate computer choice
 const playGame = (userChoice) => {
     let compChoice = generateComputerChoice();
     printChoices(userChoice, compChoice);
-    console.log('User choice =' + userChoice);
-    console.log('Computer choice =' + compChoice);
     let scores = checkWinner(userChoice, compChoice);
-    console.log('Scores = ' + scores);
     printScore(scores[0], scores[1]);
 }
+displayNoneAll();
 
 gameImages.forEach(gameImage => {
     gameImage.addEventListener('click', (e) => {
