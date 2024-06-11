@@ -56,6 +56,10 @@ const printScore = (userScore, compScore) => {
     compScoreTag.innerText = compScore;
 }
 
+const printUserChoice = () => {
+
+
+}
 //Generate computer choice
 const playGame = (userChoice) => {
     let compChoice = generateComputerChoice();
