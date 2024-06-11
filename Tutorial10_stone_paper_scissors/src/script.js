@@ -46,7 +46,14 @@ const checkWinner = (userChoice, compChoice) => {
         }
     }
     return [userScore, compScore];
+}
 
+const printScore = (userScore, compScore) => {
+    let userScoreTag = document.querySelector('#user-score');
+    let compScoreTag = document.querySelector('#comp-score');
+    console.log(userScoreTag);
+    userScoreTag.innerText = userScore;
+    compScoreTag.innerText = compScore;
 }
 
 //Generate computer choice
@@ -56,6 +63,7 @@ const playGame = (userChoice) => {
     console.log('Computer choice =' + compChoice);
     let scores = checkWinner(userChoice, compChoice);
     console.log('Scores = ' + scores);
+    printScore(scores[0], scores[1]);
 }
 
 gameImages.forEach(gameImage => {
