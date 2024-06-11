@@ -64,7 +64,8 @@
 }
 
 .score-board {
-    margin-top: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     height: 30%;
     width: 50%;
     display: flex;
@@ -111,6 +112,7 @@
 
 }
 
+
 .user-choice img {
     object-fit: cover;
 }
@@ -130,4 +132,9 @@
 .scissors-choice {
     background-image: url('../images/scissors-removebg-preview.png');
     background-size: cover;
+}
+
+.choice {
+    display: flex;
+    justify-content: space-around;
 }
