@@ -9,7 +9,6 @@ const aditya = {
 }
 
 //Setting prototype means we can use other objects methods 
-
 aditya.__proto__ = employee;
 
 console.log(aditya.calcTax());
