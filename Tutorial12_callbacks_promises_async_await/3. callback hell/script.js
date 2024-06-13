@@ -8,6 +8,7 @@ function getData(data1Id, getNextData) {
     }, 2000);
 }
 
+//Callback Hell
 getData('data1', () => {
     getData('data2', () => {
         getData('data3');
