@@ -18,6 +18,7 @@ class Engineer extends Person {
     }
 
     work() {
+        this.eat();
         console.log('Treat Machines');
     }
 }
