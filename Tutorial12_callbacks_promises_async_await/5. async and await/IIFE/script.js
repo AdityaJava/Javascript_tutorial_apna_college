@@ -23,3 +23,24 @@
 
 //Immediately invoked function expression is a function that is called immediately as soon as it is defined
 
+function api() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Call is successful');
+            resolve(200);
+        }, 2000);
+    });
+}
+
+
+//Below is syntax of IIFE
+//(func)();
+
+(
+    async function getWeatherData() {
+        await api();
+        await api();
+        console.log('After calls in function');
+    }
+)();
+
