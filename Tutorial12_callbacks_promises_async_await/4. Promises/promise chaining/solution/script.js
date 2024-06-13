@@ -25,5 +25,11 @@ prom1.then((result) => {
     let p2 = async2();
     p2.then((result) => {
         console.log(result);
-    })
+    });
+
+    //Above can be written in following way but above is more understandable as call is separate
+    // async2().then((result) => {
+    //     console.log(result);
+    // })
+
 });
