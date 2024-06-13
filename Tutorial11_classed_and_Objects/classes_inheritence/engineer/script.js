@@ -12,6 +12,11 @@ class Person {
 
 
 class Engineer extends Person {
+    constructor(branch) {
+        super();//This is compulsory for derived classes
+        this.branch = branch;
+    }
+
     work() {
         console.log('Treat Machines');
     }
