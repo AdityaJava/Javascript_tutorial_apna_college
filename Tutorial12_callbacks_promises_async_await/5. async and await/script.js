@@ -1,8 +1,19 @@
 //Async function always returns a promise
 //Await pauses the execution of its surrounding async function until the promise is settled
 
-async function hello() {
-    console.log('hello');
+function api() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Call is successful');
+        }, 2000);
+    });
 }
 
-console.log(hello());
+async function getWeatherData() {
+    await api();
+    console.log('After Api call in function');
+}
+
+getWeatherData();
+
+console.log('After Api call');
