@@ -18,6 +18,7 @@ function async2() {
 }
 
 //Promise chaining
+//This we have used a lot in our react project
 let prom1 = async();
 prom1.then((result) => {
     console.log(result);
@@ -26,10 +27,20 @@ prom1.then((result) => {
     p2.then((result) => {
         console.log(result);
     });
-
     //Above can be written in following way but above is more understandable as call is separate
     // async2().then((result) => {
     //     console.log(result);
     // })
-
 });
+
+//2nd way
+let prom1Of2 = async();
+prom1.then((result) => {
+    console.log(result);
+    return async2();
+}).then((result) => {
+    console.log(result);
+});
+
+
+
