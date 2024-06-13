@@ -3,6 +3,8 @@ function hello() {
 }
 
 console.log('Hello1');
+
+//hello is callback
 setTimeout(hello, 4000);
 console.log('Hello2');
 console.log('Hello3');
