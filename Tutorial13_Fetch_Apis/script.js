@@ -13,7 +13,6 @@ const getFacts = async () => {
     for (let data of dataList) {
         para.innerText = para.innerText + data.text + '\n';
     }
-
 }
 
 btn.addEventListener('click', getFacts);
