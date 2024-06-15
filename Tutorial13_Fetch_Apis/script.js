@@ -10,7 +10,6 @@ const getFacts = async () => {
     let response = await fetch(url);
     console.log(response);
     let dataList = await response.json();
-    //console.log(dataList);
     for (let data of dataList) {
         para.innerText = para.innerText + data.text + '\n';
     }
