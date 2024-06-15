@@ -9,9 +9,12 @@ const getFacts = async () => {
     console.log('Sending request');
     let response = await fetch(url);
     console.log(response);
-    let data = await response.json();
-    console.log(data);
-    para.innerText = data[0].text;
+    let dataList = await response.json();
+    //console.log(dataList);
+    for (let data of dataList) {
+        para.innerText = para.innerText + data.text + '\n';
+    }
+
 }
 
 btn.addEventListener('click', getFacts);
