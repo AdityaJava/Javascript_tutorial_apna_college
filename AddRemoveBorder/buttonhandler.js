@@ -1,6 +1,7 @@
 let isAddOn = true;
-
+//Test change
 function addOrRemoveBorder() {
+    console.log(isAddOn);
     console.log(isAddOn);
     let addRemoveButton = document.querySelector('#add-remove-border');
     if (isAddOn) {
