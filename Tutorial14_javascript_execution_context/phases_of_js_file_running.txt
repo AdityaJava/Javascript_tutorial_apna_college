@@ -13,6 +13,39 @@ function addNum(n1,n2){
     return total;
 }
 
-let r1 = addNum(1,2);
+let r1 = addNum(val1,val2);
 let r2= addNum(9,8);
 //code ends
+
+
+1. GLobal execution / GLoabl Environment
+    step 1. The code is allocated inside 'this'
+
+2. Memory creation Phase
+   val1 -> undefined
+   val2 -> undefined
+   addNum -> defination of code
+   r1 -> undefined
+   r2 -> undefined
+
+3. Execution Phase
+   val1 <- 10
+   val2 <- 5
+   addNum (This is for call at line 16) -> This is an function so a different execution context is created for it. Different execution context means the 2 phases
+               Memory Creation phase and Execution phase are created for function.
+               So a NEW VARIABLE Environment + Execution Thread are created for it
+   r1 -> 15 
+   addNum -> Now again here same thing will happen  
+---------------------Below are again 2 phases for addNum call at line 16 (This is not for definition)---------------------------------
+
+ 1. Memory Phase
+   val1 -> undefined
+   val2 -> undefined
+   total -> undefined 
+
+2. Execution context
+   n1 -> 10
+   n2 -> 5
+   total -> 15 (This total is returned to global execution context)
+
+ Note: This is deleted once the value is returned
