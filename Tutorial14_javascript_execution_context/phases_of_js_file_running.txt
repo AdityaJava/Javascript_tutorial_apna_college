@@ -1,0 +1,18 @@
+1. Memory Creation phase / Creation phase
+2. Execution phase
+
+
+Example:
+
+//Code starts
+let val1=10;
+let val2 = 5;
+
+function addNum(n1,n2){
+    let total = n1+n2;
+    return total;
+}
+
+let r1 = addNum(1,2);
+let r2= addNum(9,8);
+//code ends
