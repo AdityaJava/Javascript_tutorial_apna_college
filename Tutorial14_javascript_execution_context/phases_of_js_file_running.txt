@@ -33,9 +33,10 @@ let r2= addNum(9,8);
    val2 <- 5
    addNum (This is for call at line 16) -> This is an function so a different execution context is created for it. Different execution context means the 2 phases
                Memory Creation phase and Execution phase are created for function.
-               So a NEW VARIABLE Environment + Execution Thread are created for it
+               So a NEW VARIABLE Environment (NVE) + Execution Thread(ET) are created for it
    r1 -> 15 
    addNum -> Now again here same thing will happen  
+
 ---------------------Below are again 2 phases for addNum call at line 16 (This is not for definition)---------------------------------
 
  1. Memory Phase
@@ -49,3 +50,21 @@ let r2= addNum(9,8);
    total -> 15 (This total is returned to global execution context)
 
  Note: This is deleted once the value is returned
+
+
+ ---------------------Below are again 2 phases for addNum call at line 17 (This is not for definition)---------------------------------
+
+ 1. Memory Phase
+   val1 -> undefined
+   val2 -> undefined
+   total -> undefined 
+
+2. Execution context/Phase
+   n1 -> 9
+   n2 -> 8
+   total -> 17 (This total is returned to global execution context)
+
+ Note: This is deleted once the value is returned
+
+
+ --------------------------------------------------------------------------
