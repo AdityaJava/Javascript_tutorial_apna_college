@@ -1,70 +1,131 @@
-1. Memory Creation phase / Creation phase
-2. Execution phase
+JavaScript Execution Context Explained
 
+When JavaScript code runs, it does so inside something called an
+Execution Context.
+This determines how variables, functions, and objects are stored and
+executed.
 
-Example:
+There are always two main phases when JavaScript code is executed:
 
-//Code starts
-let val1=10;
-let val2 = 5;
+1.  Memory Creation Phase (Creation Phase)
+2.  Execution Phase
 
-function addNum(n1,n2){
-    let total = n1+n2;
-    return total;
-}
+Let’s go step by step with an example.
 
-let r1 = addNum(val1,val2);
-let r2= addNum(9,8);
-//code ends
+  --------------
+  Example Code
+  --------------
 
+    // Code starts
+    let val1 = 10;
+    let val2 = 5;
 
-1. GLobal execution / GLoabl Environment
-    step 1. The code is allocated inside 'this'
+    function addNum(n1, n2) {
+        let total = n1 + n2;
+        return total;
+    }
 
-2. Memory creation Phase
-   val1 -> undefined
-   val2 -> undefined
-   addNum -> defination of code
-   r1 -> undefined
-   r2 -> undefined
+    let r1 = addNum(val1, val2);
+    let r2 = addNum(9, 8);
+    // Code ends
 
-3. Execution Phase
-   val1 <- 10
-   val2 <- 5
-   addNum (This is for call at line 16) -> This is an function so a different execution context is created for it. Different execution context means the 2 phases
-               Memory Creation phase and Execution phase are created for function.
-               So a NEW VARIABLE Environment (NVE) + Execution Thread(ET) are created for it
-   r1 -> 15 
-   addNum -> Now again here same thing will happen  
+  -------------------------------------------
+  Global Execution Context (GEC)
+  -------------------------------------------
+  Whenever JS runs a file, the Global
+  Execution Context (GEC) is created. This
+  has two phases: Memory Creation Phase and
+  Execution Phase.
 
----------------------Below are again 2 phases for addNum call at line 16 (This is not for definition)---------------------------------
+  ### Step 1. Global Execution / Global
+  Environment - The code is allocated inside
+  the this keyword (browser → window, NodeJS
+  → {}). - JavaScript engine creates the
+  Global Object + this + outer environment.
+  -------------------------------------------
 
- 1. Memory Phase
-   val1 -> undefined
-   val2 -> undefined
-   total -> undefined 
+Step 2. Memory Creation Phase (for Global Scope)
 
-2. Execution context
-   n1 -> 10
-   n2 -> 5
-   total -> 15 (This total is returned to global execution context)
+In this phase, memory is allocated for variables and functions but not
+executed yet.
 
- Note: This is deleted once the value is returned
+-   val1 → undefined
+-   val2 → undefined
+-   addNum → Function definition is stored in memory
+-   r1 → undefined
+-   r2 → undefined
 
+  -------------------------------------------
+  Step 3. Execution Phase (for Global Scope)
+  -------------------------------------------
+  Now line-by-line execution happens.
 
- ---------------------Below are again 2 phases for addNum call at line 17 (This is not for definition)---------------------------------
+  - val1 = 10 - val2 = 5 - At line
+  let r1 = addNum(val1, val2); - A new
+  Function Execution Context (FEC) is created
+  for addNum. - r1 = 15 - At line
+  let r2 = addNum(9, 8); - Another new
+  Function Execution Context (FEC) is
+  created. - r2 = 17
 
- 1. Memory Phase
-   val1 -> undefined
-   val2 -> undefined
-   total -> undefined 
+  So after execution: - val1 = 10 -
+  val2 = 5 - r1 = 15 - r2 = 17
+  -------------------------------------------
 
-2. Execution context/Phase
-   n1 -> 9
-   n2 -> 8
-   total -> 17 (This total is returned to global execution context)
+Function Execution Context (FEC)
 
- Note: This is deleted once the value is returned
+Whenever a function is called, a new Function Execution Context is
+created.
+This again has two phases.
 
+Example: Function call addNum(val1, val2)
 
- --------------------------------------------------------------------------
+1.  Memory Creation Phase (inside function)
+    -   n1 → undefined
+    -   n2 → undefined
+    -   total → undefined
+2.  Execution Phase
+    -   n1 = 10
+    -   n2 = 5
+    -   total = 15
+    -   return total → 15 (this value is sent back to Global Execution
+        Context)
+
+⚠️ Once the function finishes execution, the Function Execution Context
+is destroyed (garbage collected).
+
+  -------------------------------------------
+  Another Function Call Example: addNum(9, 8)
+  -------------------------------------------
+           🔑 Key Points to Remember
+
+  -------------------------------------------
+
+1.  Global Execution Context (GEC) is created once when JS file starts
+    execution.
+2.  Each function call creates a new Function Execution Context (FEC).
+3.  Each execution context has:
+    -   Memory Phase → variables initialized to undefined, functions
+        stored as definitions.
+    -   Execution Phase → actual assignment and execution happen.
+4.  Function Execution Context is deleted after execution, but Global
+    Execution Context remains until program ends.
+
+  ---------------------------------------
+  📌 Visual Representation (Simplified)
+  ---------------------------------------
+
+Global Execution Context (GEC)
+
+Memory Phase: val1 → undefined val2 → undefined addNum → function {} r1
+→ undefined r2 → undefined
+
+Execution Phase: val1 = 10 val2 = 5 r1 = addNum(10, 5) → 15 r2 =
+addNum(9, 8) → 17
+
+Function Execution Context (FEC - for addNum)
+
+Memory Phase: n1 → undefined n2 → undefined total → undefined
+
+Execution Phase: n1 = value passed n2 = value passed total = n1 + n2
+return total → back to GEC
