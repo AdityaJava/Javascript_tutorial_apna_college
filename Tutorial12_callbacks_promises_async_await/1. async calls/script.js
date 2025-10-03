@@ -10,6 +10,9 @@ console.log('Hello2');
 console.log('Hello3');
 console.log('Hello4');
 
+for(let i=0; i<100; i++){
+    setTimeout(()=>console.log(i), i * 1000);
+}
 ///////////////////////////////////
 
 
