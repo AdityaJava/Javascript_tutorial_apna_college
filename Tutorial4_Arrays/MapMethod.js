@@ -1,8 +1,8 @@
-let arr = [1, 2, 3, 5, 6, 8, 9];
+let arr = [ 1, 2, 3, 5, 6, 8, 9 ];
 
 
-let result = arr.map(eArr => {
+let result = arr.map( eArr => {
     return eArr * eArr;
-});
+} );
 
-console.log(result);
+console.log( result );

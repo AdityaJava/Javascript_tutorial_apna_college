@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="calculator_inputs">
+      <input type="text" placeholder="num1" id="num1">
+      <input type="text" placeholder="num2" id="num2">
+    </div>
+    <div class="calculator_operations">
+      <label>
+        <input type="radio" name="MathOperation" value="add">
+        Add
+      </label>
+      <label>
+        <input type="radio" name="MathOperation" value="sub">
+        Sub
+      </label>
+      <label>
+        <input type="radio" name="MathOperation" value="mul">
+        Mul
+      </label>
+      <label>
+        <input type="radio" name="MathOperation" value="div">
+        Div
+      </label>
+    </div>
+    <div class="calculator_actions">
+      <button id="calculateBtn" class="success_btn">Calculate</button>
+      <output id="result"></output>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

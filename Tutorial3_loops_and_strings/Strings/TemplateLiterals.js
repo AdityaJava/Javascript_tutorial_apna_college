@@ -1,9 +1,9 @@
 //Template Literals:- The way to have embeded expressions in strings. Note this is a string only
 //This phenomenon is called string interpolation
 let krishnaName = 'Krishna';
-let radhaName = `radha ${krishnaName}`;
+let radhaName = `radha ${ krishnaName }`;
 
-console.log(radhaName);
+console.log( radhaName );
 
 ///////////
 let obj = {
@@ -11,10 +11,10 @@ let obj = {
     price: 10
 }
 
-console.log(`The cost of ${obj.item} is ${obj.price}rs`);
+console.log( `The cost of ${ obj.item } is ${ obj.price }rs` );
 
 
-console.log(`The addition of 1+2+3 = ${1 + 2 + 3}`);
+console.log( `The addition of 1+2+3 = ${ 1 + 2 + 3 }` );
 
 
 
