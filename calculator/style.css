@@ -44,3 +44,11 @@
   color: #fff;
   background-color: #1F487E;
 }
+
+.success_btn:hover {
+  transform: scale(1.05);
+}
+
+.success_btn:active {
+  transform: scale(0.95);
+}
