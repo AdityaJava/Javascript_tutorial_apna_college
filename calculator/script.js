@@ -20,7 +20,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     );
     let n2 = Number( num2.value );
     console.log( selectedOperation )
-    debugger
     switch ( selectedOperation ) {
       case 'add':
         res = n1 + n2;
@@ -32,6 +31,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
         res = n1 * n2;
         break;
       case 'div':
+        if ( n2 === 0 ) {
+          showResult( 'Please enter number other than zero for num2' );
+          return;
+        }
         res = n1 / n2;
         break;
     }
@@ -40,6 +43,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
   function showResult( message ) {
     resultElement.innerHTML = message;
+  }
+
+  function validation() {
+
   }
 
 } )
