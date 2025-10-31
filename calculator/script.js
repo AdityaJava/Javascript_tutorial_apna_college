@@ -4,6 +4,9 @@ document.addEventListener( 'DOMContentLoaded', () => {
   let num2 = document.getElementById( 'num2' );
   const calculateBtn = document.getElementById( 'calculateBtn' );
   const resultElement = document.getElementById( 'result' );
+  const calculator = document.getElementById( 'calculator' );
+
+
   console.dir( calculateBtn )
 
   calculateBtn.addEventListener( 'click', calculate );
