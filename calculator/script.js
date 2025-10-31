@@ -44,9 +44,4 @@ document.addEventListener( 'DOMContentLoaded', () => {
   function showResult( message ) {
     resultElement.innerHTML = message;
   }
-
-  function validation() {
-
-  }
-
 } )
